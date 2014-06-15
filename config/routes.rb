@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'games/start'
+
+  get 'games/current'
+
+  get 'games/join'
+
   root 'login#index'
 
   get 'people/friends'

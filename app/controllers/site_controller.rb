@@ -2,7 +2,7 @@ class SiteController < ApplicationController
   layout 'site'
 
   def home
-    @header_title = "Home"
+    @header_title = "Messages"
   end
 
   def account

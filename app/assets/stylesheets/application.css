@@ -42,3 +42,5 @@
 #inner-collapsible:last-child h2 a {
     border-bottom-width: 0px !important;    
 }
+
+#ui-datepicker-div { display: none; } 
