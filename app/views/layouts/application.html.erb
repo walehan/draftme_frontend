@@ -1,0 +1,48 @@
+
+</head>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DrafmeFrontend</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript">
+$(document).ready(function(){
+resizeDiv();
+});
+
+window.onresize = function(event) {
+resizeDiv();
+}
+
+function resizeDiv() {
+vpw = $(window).width();
+vph = $(window).height();
+$(‘#somediv’).css({‘height’: vph + ‘px’});
+}
+  </script>
+</head>
+<body>
+
+<div data-role="header" data-position="fixed">
+        <h1>Draft.me</h1>
+</div>
+
+<div data-role="content">
+<%= yield %>
+</div>
+<div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><%= link_to 'Home', site_home_path, :class =>"ui-btn ui-icon-home ui-btn-icon-top" %></li>
+            <li><%= link_to 'Games', site_games_path, :class =>"ui-btn ui-icon-bullets ui-btn-icon-top" %></li>
+            <li><%= link_to 'People', site_people_path, :class =>"ui-btn ui-icon-edit ui-btn-icon-top" %></li>
+            <li><%= link_to 'Account', site_account_path, :class =>"ui-btn ui-icon-user ui-btn-icon-top" %></li>
+          </ul>
+        </div>
+</div>
+
+</body>
+</html>

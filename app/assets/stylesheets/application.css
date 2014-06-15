@@ -1,0 +1,44 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require jquery.mobile
+ */
+
+#outer-collapsible .ui-collapsible-content {
+    /*padding: 5px 5px !important;*/
+}
+
+#inner-collapsible {
+    margin: 0 -15px 0 -15px!important;
+    border-radius: 0 0 0 0 !important;
+}
+
+#inner-collapsible h2 a {
+    border-width: 0px !important;    
+    border-bottom-width: 1px !important;    
+}
+
+#inner-collapsible:first-child {
+    margin: -10px -15px 0 -15px!important;
+    border-radius: 0 0 0.6em 0.6em;
+}
+
+#inner-collapsible:last-child {
+    margin: 0 -15px -10px -15px!important;
+    border-radius: 0 0 0.6em 0.6em !important;
+}
+
+#inner-collapsible:last-child h2 a {
+    border-bottom-width: 0px !important;    
+}
