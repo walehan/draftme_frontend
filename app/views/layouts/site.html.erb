@@ -33,6 +33,17 @@ $(‘#somediv’).css({‘height’: vph + ‘px’});
 <div data-role="content">
 <%= yield %>
 </div>
+<div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href='javascript: history.back()' class="ui-btn ui-icon-back ui-btn-icon-top">Back</a></li>
+            <li><%= link_to 'Home', site_home_path, :class =>"ui-btn ui-icon-home ui-btn-icon-top" %></li>
+            <li><%= link_to 'Games', site_games_path, :class =>"ui-btn ui-icon-bullets ui-btn-icon-top" %></li>
+            <li><%= link_to 'People', site_people_path, :class =>"ui-btn ui-icon-edit ui-btn-icon-top" %></li>
+            <li><%= link_to 'Account', site_account_path, :class =>"ui-btn ui-icon-user ui-btn-icon-top" %></li>
+          </ul>
+        </div>
+</div>
 
 </body>
 </html>

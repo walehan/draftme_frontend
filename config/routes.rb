@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root 'login#index'
+
   get 'people/friends'
 
   get 'people/draft'
@@ -11,7 +14,10 @@ Rails.application.routes.draw do
 
   get 'people/find'
 
+  get 'site/login'
+
   get 'site/home'
+  post 'site/home'
 
   get 'site/account'
 
