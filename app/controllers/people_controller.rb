@@ -1,5 +1,4 @@
 class PeopleController < ApplicationController
-  layout 'site'
 
   def friends
     @header_title="Search Contacts"

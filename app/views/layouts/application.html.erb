@@ -22,17 +22,40 @@ vpw = $(window).width();
 vph = $(window).height();
 $(‘#somediv’).css({‘height’: vph + ‘px’});
 }
+
   </script>
 </head>
 <body>
 
-<div data-role="header" data-position="fixed">
+    <div data-role="header">
         <h1><%= @header_title %></h1>
-</div>
+        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+    </div><!-- /header -->
+    <div role="main" class="ui-content jqm-content jqm-fullwidth">
+      <%= yield %>
+    </div><!-- /content -->
+    <div data-role="panel" data-display="overlay" data-theme="a" id="nav-panel">
+        <ul data-role="listview" data-icon="false">
+            <li data-role="list-divider">Walter Han</li>
+            <li><%= link_to 'Home', site_index_path %></li>
+            <li><%= link_to 'Events', site_home_path %></li>
+            <li><%= link_to 'Messages', site_home_path %><span class="ui-li-count">22</span></li>
+            <li><%= link_to 'Update Info', site_account_path %></li>
+            <li><%= link_to 'Account Settings', site_account_path %></li>
+            <li data-role="list-divider">Games</li>
+            <li><%= link_to 'Start a Game', games_start_path %></li>
+            <li><%= link_to 'My Games', games_current_path %></li>
+            <li><%= link_to 'Join a Game', games_join_path %></li>
+            <li data-role="list-divider">People</li>
+            <li><%= link_to 'Friends', people_friends_path %></li>
+            <li><%= link_to 'Friend Groups', people_groups_path %></li>
+            <li><%= link_to 'Teams', people_teams_path %></li>
+            <li data-role="list-divider">Draft Central</li>
+            <li><%= link_to 'Draft Player', people_draft_path %></li>
+            <li><%= link_to 'My Free Agency', people_find_path %></li>
+        </ul>
+    </div><!-- /panel -->
 
-<div data-role="content">
-<%= yield %>
-</div>
 
 </body>
 </html>

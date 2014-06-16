@@ -6,7 +6,6 @@ Rails.application.routes.draw do
 
   get 'games/join'
 
-  root 'login#index'
 
   get 'people/friends'
 
@@ -23,6 +22,8 @@ Rails.application.routes.draw do
   get 'site/login'
 
   get 'site/home'
+  get 'site/index'
+
   post 'site/home'
 
   get 'site/account'

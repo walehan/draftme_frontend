@@ -1,5 +1,4 @@
 class SiteController < ApplicationController
-  layout 'site'
 
   def home
     @header_title = "Messages"

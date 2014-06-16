@@ -1,5 +1,4 @@
 class GamesController < ApplicationController
-  layout 'site'
   def start
     @header_title = "Start a Game"
   end

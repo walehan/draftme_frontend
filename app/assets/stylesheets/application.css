@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  *= require jquery.mobile
+ *= require jquery.mobile.datepicker
+ *= require jquery.mobile.datepicker.theme
+ *= require theme-template
  */
 
 #outer-collapsible .ui-collapsible-content {
@@ -44,3 +47,7 @@
 }
 
 #ui-datepicker-div { display: none; } 
+
+.left-block{
+   border-right: 1px solid #CCC!important; 
+}
